@@ -28,95 +28,14 @@ Dashboard 관제
 
 최종적으로는 요청 검증 → 격리 수집 → 모델 재학습 → 관제·피드백 → 다시 요청 검증의 순환 구조를 구현하는 것이 목표입니다.
 
+
 👥 Team
 
-담당
+담당 역할
+실환 AI 학습, AI 추론 서버, NAS 관리, Dataset 관리, 모델 버전 관리
+윤종 Backend API, AI 서버 연동, NAS 로그 저장, 통계 API, 전체 서비스 연결
+성조 Frontend, Prompt 검사 화면, Dashboard, 탐지 결과 및 통계 시각화
 
-역할
-
-실환
-
-AI 학습, AI 추론 서버, NAS 관리, Dataset 관리, 모델 버전 관리
-
-윤종
-
-Backend API, AI 서버 연동, NAS 로그 저장, 통계 API, 전체 서비스 연결
-
-성조
-
-Frontend, Prompt 검사 화면, Dashboard, 탐지 결과 및 통계 시각화
-
-⚙️ Tech Stack
-
-AI / MLOps
-
-Python
-
-PyTorch
-
-Hugging Face Transformers / Datasets
-
-scikit-learn
-
-Pandas
-
-Backend
-
-FastAPI
-
-Uvicorn
-
-Pydantic
-
-httpx
-
-Frontend
-
-Streamlit
-
-Plotly
-
-Requests
-
-Infrastructure
-
-NAS
-
-Tailscale
-
-Git / GitHub
-
-Docker (추후 적용)
-
-🚨 Detection
-
-초기 탐지 대상은 다음과 같습니다.
-
-NORMAL
-
-PROMPT_INJECTION
-
-SYSTEM_PROMPT_LEAKAGE
-
-UNKNOWN
-
-탐지 결과는 위험도에 따라 다음 세 단계로 구분합니다.
-
-Risk Score
-
-Result
-
-0.00 ~ 0.29
-
-SAFE
-
-0.30 ~ 0.69
-
-SUSPICIOUS
-
-0.70 ~ 1.00
-
-BLOCK
 
 🗄️ NAS Structure
 
